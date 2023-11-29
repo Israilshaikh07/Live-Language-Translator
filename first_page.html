@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranlator</title>
+    <style>
+    body{
+        margin: 0%;
+        min-height: 100vh;
+        background: black;
+    }
+    .navbar{
+        margin-top: 30px;
+        background: #606060;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        border: 2px solid black;
+        margin: 10% 30%;
+    }
+    #name{
+        width: 100%;
+        height: 40px;
+        padding: 1px;
+        margin: 10px;
+        color: black;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #submit{
+        width: 50%;
+        height: 40px;
+        font-size: 15px;
+        color: white;
+        background: black;
+        padding: 2px;
+        border: none;
+        border-radius: 10px;
+    }
+    </style>
+        <script>
+            function submitForm() {
+                var name = document.getElementById("name").value;
+                
+                sessionStorage.setItem("user_name", name);
+
+                window.location.href = "index.html";
+            }
+        </script>
+</head>
+<body>
+    <div class="navbar">
+        <img class="image" src="LT.png" height="300px" width="300px">
+        <form class="myForm" onsubmit="submitForm(); return false;">
+        <input type="text" id="name" placeholder="Enter your name" required>  <br>      
+        <input type="submit" id="submit" onclick="window.location.href='index.html'" value="Translator Here">
+        </form>
+    </div>
+</body>
+</html>
